@@ -1,0 +1,369 @@
+body {
+  /* Начало обнуления */
+  margin: 0;
+  padding: 0;
+  /* Конец обнуления */
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  /* На лекции вместо bold ставил 700, потому что bold = 700 */
+  font-weight: bold;
+  color: #ffffff;
+  /* Заглавные буквы все */
+  text-transform: uppercase;
+  background-color: #000000;
+  background-image: url("../img/bg.jpg");
+  /* Почему top? */
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* catalog.html */
+
+.inner-page {
+  color: #000000;
+  background-color: #f9f6f3;
+  background-image: url("../img/pattern-light.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.page-title {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: #000000;
+}
+
+.breadcrumbs a:hover, .breadcrumbs a:focus {
+  text-decoration: underline;
+}
+
+.breadcrumbs-current {
+  color: #aba9a7;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filters legend {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.filters ul {
+  list-style: none;
+  line-height: 18px;
+}
+
+.filter-input:hover+label, .filter-input:focus+label {
+  color: #663d15;
+}
+
+.filter-input:disabled+label {
+  color: rgba(0, 0, 0, 0.5)
+}
+
+.catalog ul {
+  list-style: none;
+}
+
+.catalog-item {
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item>a {
+  color: #000000;
+}
+
+.catalog-item h3 {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.catalog-category {
+  text-transform: none;
+}
+
+.catalog b {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #e5e5e5;
+}
+
+.catalog .button {
+  font-weight: 18px;
+  text-align: center;
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-list a {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.pagination-list a:focus, .pagination-list a:hover, .pagination-list a:active {
+  color: #ffffff;
+  background-color: #663d15;
+}
+
+.pagination-item-current a {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.pagination-item-current a:hover, .pagination-item-current a:focus, .pagination-item-current a:active {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* конец catalog.html */
+
+/* начало catlog-item.html */
+
+.breadcrumbs-item {
+  list-style: none;
+}
+
+.breadcrumbs-item a {
+  line-height: 24px;
+  color: #000000;
+}
+
+.breadcrumbs-item a:hover, .breadcrumbs-item a:focus {
+  text-decoration: underline;
+}
+
+.product-photo-full {
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-photo-full:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-photo-preview {
+  list-style: none;
+}
+
+.product-photo-preview li {
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-photo-preview li:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-article {
+  text-align: right;
+  color: #aeaeae;
+}
+
+.product-info b {
+  line-height: 20px;
+  text-align: center;
+  background-color: #e5e5e5;
+}
+
+.product-info h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.product-info ul {
+  list-style: none;
+}
+
+/* конец catlog-item.html */
+
+a {
+  /* Убираем подчеркирование */
+  text-decoration: none;
+}
+
+.button {
+  font: inherit;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: #000000;
+  border: none;
+}
+
+.button:hover, .button:active, .button:focus {
+  background-color: #663d15;
+}
+
+.main-navigation {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.site-navigation, .user-navigation {
+  /* Убираем маркеры у меня */
+  list-style: none;
+}
+
+.site-navigation a, .user-navigation a {
+  /* Цвет ссылок */
+  color: #ffffff;
+}
+
+.site-navigation a:hover, .site-navigation a:focus, .user-navigation a:hover, .user-navigation a:focus {
+  /* Задний фон при наведении на ссылки меню */
+  background-color: #242424;
+}
+
+.features-list {
+  /* Убираем маркеры у преимуществ */
+  list-style: none;
+}
+
+.feature-item {
+  /* Располагаем по центру преимущества */
+  text-align: center;
+}
+
+.feature-item h3 {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.index-columns {
+  color: #000000;
+  background-color: #f9f6f3;
+  background-image: url("../img/pattern-light.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.index-columns h2 {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.news-list {
+  list-style: none;
+}
+
+.news-list time {
+  text-transform: none;
+}
+
+.gallery-content {
+  /* Зачем то фон и рамку ??? */
+  background-color: #cccccc;
+  border: 7px solid #ffffff;
+}
+
+.appointment-item input {
+  font: inherit;
+  /* transparent - прозрачный фон */
+  background-color: transparent;
+  border: 2px solid #000000;
+}
+
+.appointment-item input:focus {
+  border-color: #663d15;
+}
+
+.main-footer {
+  color: #ffffff;
+  background-color: #212121;
+  background-image: url("../img/pattern-dark.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.footer-contacts a {
+  color: #ffffff;
+  /* Подчеркивание ! */
+  text-decoration: underline;
+}
+
+..footer-contacts a:focus, .footer-contacts a:hover {
+  /* При наведении убирает подчеркивание ! */
+  text-decoration: none;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  color: #ffffff;
+}
+
+.footer-copyright {
+  text-align: center;
+}
+
+.footer-copyright .button:hover, .footer-copyright .button:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.modal {
+  color: #000000;
+  background-color: #f8f3f0;
+  background-image: url("../img/pattern-light.jpg");
+  position: 0 0;
+  background-repeat: repeat
+}
+
+.modal h2 {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.login-form input[type="text"], .login-form input[type="password"] {
+  font: inherit;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+
+.login-form input:focus {
+  border-color: #663d15;
+}
+
+.login-checkbox:hover, .login-checkbox:focus {
+  color: #663d15;
+}
+
+.restore {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.restore:hover, .restore:focus {
+  text-decoration: none;
+}
