@@ -18,6 +18,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.visually-hidden {
+  display: none;
+}
+
 /* catalog.html */
 
 .inner-page {
@@ -31,10 +35,6 @@ body {
 .page-title {
   font-size: 30px;
   line-height: 42px;
-}
-
-.breadcrumbs {
-  list-style: none;
 }
 
 .breadcrumbs a {
@@ -59,7 +59,7 @@ body {
 }
 
 .filters ul {
-  list-style: none;
+  : none;
   line-height: 18px;
 }
 
@@ -69,10 +69,6 @@ body {
 
 .filter-input:disabled+label {
   color: rgba(0, 0, 0, 0.5)
-}
-
-.catalog ul {
-  list-style: none;
 }
 
 .catalog-item {
@@ -109,10 +105,6 @@ body {
   text-align: center;
 }
 
-.pagination-list {
-  list-style: none;
-}
-
 .pagination-list a {
   color: #ffffff;
   background-color: #000000;
@@ -137,10 +129,6 @@ body {
 
 /* начало catlog-item.html */
 
-.breadcrumbs-item {
-  list-style: none;
-}
-
 .breadcrumbs-item a {
   line-height: 24px;
   color: #000000;
@@ -158,10 +146,6 @@ body {
 .product-photo-full:hover {
   background-color: #f8f8f8;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.product-photo-preview {
-  list-style: none;
 }
 
 .product-photo-preview li {
@@ -190,10 +174,6 @@ body {
   line-height: 30px;
 }
 
-.product-info ul {
-  list-style: none;
-}
-
 /* конец catlog-item.html */
 
 a {
@@ -216,15 +196,62 @@ a {
 }
 
 .main-navigation {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-  background-color: #000000;
+  background-color: transparent;
+  margin-bottom: 75px;
+  border: 1px solid red;
 }
 
-.site-navigation, .user-navigation {
-  /* Убираем маркеры у меня */
+.container {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
+  border: 1px solid yellow;
+}
+
+.main-navigation-wrapper {
+  width: 100%;
+  margin-bottom: 60px;
+  background-color: #000000;
+  border: 1px solid green;
+}
+
+.main-header {
+  margin-bottom: 75px;
+}
+
+.main-header-logo {
+  width: 371px;
+  height: 155px;
+  order: 3;
+  border: 1px solid blue;
+}
+
+.main-navigation-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-navigation {
+  width: 540px;
+  border: 1px solid white;
+}
+
+.user-navigation {
+  width: 140px;
+  border: 1px solid white;
+}
+
+.site-navigation, .user-navigation, .features-list, .news-list, .breadcrumbs, .catalog ul, .product-info ul, .product-photo-preview, .breadcrumbs-item, .pagination-list, .footer-social ul {
+  /* Убираем маркеры, маргины и паддинги у списков */
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .site-navigation a, .user-navigation a {
@@ -237,14 +264,21 @@ a {
   background-color: #242424;
 }
 
+.features {
+  margin-bottom: 64px;
+  border: 1px solid green;
+}
+
 .features-list {
-  /* Убираем маркеры у преимуществ */
-  list-style: none;
+  justify-content: space-between;
+  display: flex;
 }
 
 .feature-item {
   /* Располагаем по центру преимущества */
   text-align: center;
+  width: 300px;
+  border: 1px solid blue;
 }
 
 .feature-item h3 {
@@ -258,25 +292,58 @@ a {
   background-image: url("../img/pattern-light.jpg");
   background-position: 0 0;
   background-repeat: repeat;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+  padding: 50px 80px;
+}
+
+.index-columns:first-of-type {
+  margin-bottom: 36px;
 }
 
 .index-columns h2 {
   font-size: 30px;
   line-height: 42px;
+  margin: 0;
 }
 
-.news-list {
-  list-style: none;
+.news {
+  width: 380px;
+  border: 1px solid green;
 }
 
 .news-list time {
   text-transform: none;
 }
 
+.gallery {
+  width: 300px;
+  border: 1px solid green;
+}
+
 .gallery-content {
   /* Зачем то фон и рамку ??? */
   background-color: #cccccc;
   border: 7px solid #ffffff;
+}
+
+.contacts {
+  width: 380px;
+  border: 1px solid green;
+}
+
+.appointment {
+  width: 300px;
+  border: 1px solid green;
+}
+
+.appointment-info {
+  margin: 0;
+}
+
+.appointment-item {
+  margin: 0;
 }
 
 .appointment-item input {
@@ -291,11 +358,25 @@ a {
 }
 
 .main-footer {
+  border: 1px solid #fefefe;
+  padding: 60px 0;
+  margin-top: 65px;
   color: #ffffff;
   background-color: #212121;
   background-image: url("../img/pattern-dark.jpg");
   background-position: 0 0;
   background-repeat: repeat;
+}
+
+.main-footer .container {
+  display: flex;
+}
+
+.footer-contacts {
+  width: 320px;
+  margin: 0;
+  margin-right: 70px;
+  border: 1px solid green;
 }
 
 .footer-contacts a {
@@ -310,11 +391,9 @@ a {
 }
 
 .footer-social {
+  width: 145px;
+  border: 1px solid green;
   text-align: center;
-}
-
-.footer-social ul {
-  list-style: none;
 }
 
 .social-button {
@@ -322,7 +401,11 @@ a {
 }
 
 .footer-copyright {
+  width: 150px;
   text-align: center;
+  margin: 0;
+  margin-left: auto;
+  border: 1px solid green;
 }
 
 .footer-copyright .button:hover, .footer-copyright .button:focus {
@@ -335,7 +418,7 @@ a {
   background-color: #f8f3f0;
   background-image: url("../img/pattern-light.jpg");
   position: 0 0;
-  background-repeat: repeat
+  background-repeat: repeat;
 }
 
 .modal h2 {
@@ -367,3 +450,5 @@ a {
 .restore:hover, .restore:focus {
   text-decoration: none;
 }
+
+/* ---- Сеточные стили ----*/
