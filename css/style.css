@@ -33,8 +33,16 @@ body {
 }
 
 .page-title {
+  padding: 0;
+  margin: 0;
   font-size: 30px;
   line-height: 42px;
+  width: 254px;
+  margin-bottom: 27px;
+}
+
+.breadcrumbs {
+  width: 300px;
 }
 
 .breadcrumbs a {
@@ -50,7 +58,14 @@ body {
 }
 
 .filter fieldset {
+  padding: 0;
+  margin: 0;
   border: none;
+}
+
+.filters {
+  width: 220px;
+  min-height: 172px;
 }
 
 .filters legend {
@@ -59,7 +74,8 @@ body {
 }
 
 .filters ul {
-  : none;
+  margin: 0;
+  list-style: none;
   line-height: 18px;
 }
 
@@ -71,9 +87,26 @@ body {
   color: rgba(0, 0, 0, 0.5)
 }
 
+.catalog {
+  width: 700px;
+}
+
+.catalog-columns {
+  margin-top: 37px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .catalog-item {
+  width: 220px;
   background-color: #f8f8f8;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.catalog-item:nth-of-type(3n) {
+  margin-right: 0px;
 }
 
 .catalog-item:hover {
@@ -105,6 +138,12 @@ body {
   text-align: center;
 }
 
+.pagination-list {
+  width: 193px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .pagination-list a {
   color: #ffffff;
   background-color: #000000;
@@ -113,6 +152,11 @@ body {
 .pagination-list a:focus, .pagination-list a:hover, .pagination-list a:active {
   color: #ffffff;
   background-color: #663d15;
+}
+
+.pagination-item {
+  width: 43px;
+  height: 43px;
 }
 
 .pagination-item-current a {
@@ -204,32 +248,53 @@ a {
   color: #ffffff;
   background-color: transparent;
   margin-bottom: 75px;
-  border: 1px solid red;
+}
+
+.inner-page .main-navigation {
+  margin-bottom: 0px;
+  min-height: 70px;
+  align-items: flex-start;
+  flex-direction: row;
 }
 
 .container {
   width: 940px;
   padding: 0 10px;
   margin: 0 auto;
-  border: 1px solid yellow;
 }
 
 .main-navigation-wrapper {
   width: 100%;
   margin-bottom: 60px;
   background-color: #000000;
-  border: 1px solid green;
+}
+
+.main-navigation .container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-header {
   margin-bottom: 75px;
 }
 
+.inner-page .main-header {
+  background-color: #000000;
+  margin-bottom: 55px;
+  min-height: 70px;
+}
+
 .main-header-logo {
   width: 371px;
   height: 155px;
   order: 3;
-  border: 1px solid blue;
+}
+
+.inner-page .main-header-logo {
+  width: 111px;
+  height: 24px;
+  order: 0;
+  padding: 23px 20px;
 }
 
 .main-navigation-wrapper .container {
@@ -239,19 +304,27 @@ a {
 
 .site-navigation {
   width: 540px;
-  border: 1px solid white;
 }
 
 .user-navigation {
   width: 140px;
-  border: 1px solid white;
 }
 
-.site-navigation, .user-navigation, .features-list, .news-list, .breadcrumbs, .catalog ul, .product-info ul, .product-photo-preview, .breadcrumbs-item, .pagination-list, .footer-social ul {
+.inner-page .user-navigation {
+  margin-left: auto;
+}
+
+.site-navigation, .user-navigation, .features-list, .news-list, .breadcrumbs, .catalog-list, .product-info ul, .product-photo-preview, .breadcrumbs-item, .pagination-list, .footer-social ul {
   /* Убираем маркеры, маргины и паддинги у списков */
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
 .site-navigation a, .user-navigation a {
@@ -266,7 +339,6 @@ a {
 
 .features {
   margin-bottom: 64px;
-  border: 1px solid green;
 }
 
 .features-list {
@@ -278,7 +350,6 @@ a {
   /* Располагаем по центру преимущества */
   text-align: center;
   width: 300px;
-  border: 1px solid blue;
 }
 
 .feature-item h3 {
@@ -294,7 +365,6 @@ a {
   background-repeat: repeat;
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
   padding: 50px 80px;
 }
 
@@ -310,7 +380,6 @@ a {
 
 .news {
   width: 380px;
-  border: 1px solid green;
 }
 
 .news-list time {
@@ -319,7 +388,6 @@ a {
 
 .gallery {
   width: 300px;
-  border: 1px solid green;
 }
 
 .gallery-content {
@@ -330,12 +398,10 @@ a {
 
 .contacts {
   width: 380px;
-  border: 1px solid green;
 }
 
 .appointment {
   width: 300px;
-  border: 1px solid green;
 }
 
 .appointment-info {
@@ -358,7 +424,6 @@ a {
 }
 
 .main-footer {
-  border: 1px solid #fefefe;
   padding: 60px 0;
   margin-top: 65px;
   color: #ffffff;
@@ -376,7 +441,6 @@ a {
   width: 320px;
   margin: 0;
   margin-right: 70px;
-  border: 1px solid green;
 }
 
 .footer-contacts a {
@@ -392,7 +456,6 @@ a {
 
 .footer-social {
   width: 145px;
-  border: 1px solid green;
   text-align: center;
 }
 
@@ -405,7 +468,6 @@ a {
   text-align: center;
   margin: 0;
   margin-left: auto;
-  border: 1px solid green;
 }
 
 .footer-copyright .button:hover, .footer-copyright .button:focus {
