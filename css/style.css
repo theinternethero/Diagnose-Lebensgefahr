@@ -18,8 +18,22 @@ body {
   background-repeat: no-repeat;
 }
 
-.visually-hidden {
-  display: none;
+.visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 /* catalog.html */
@@ -226,6 +240,9 @@ a {
 }
 
 .button {
+  display: inline-block;
+  padding: 10px 35px;
+  margin-right: 16px;
   font: inherit;
   text-align: center;
   color: #ffffff;
@@ -233,6 +250,12 @@ a {
   text-transform: uppercase;
   background-color: #000000;
   border: none;
+}
+
+.button.disabled, .button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: #000000;
 }
 
 .button:hover, .button:active, .button:focus {
@@ -303,11 +326,37 @@ a {
 }
 
 .site-navigation {
-  width: 540px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 620px;
 }
 
 .user-navigation {
-  width: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 140px;
+}
+
+.user-navigation .login-link {
+  position: relative;
+  padding-left: 50px;
+}
+
+.login-link a::before {
+  content: "";
+  position: absolute;
+  top: 29px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.login-link a:hover::before, .login-link a:focus::before, .login-link a:active::before {
+  opacity: 1;
 }
 
 .inner-page .user-navigation {
@@ -330,6 +379,8 @@ a {
 .site-navigation a, .user-navigation a {
   /* Цвет ссылок */
   color: #ffffff;
+  display: block;
+  padding: 25px 20px;
 }
 
 .site-navigation a:hover, .site-navigation a:focus, .user-navigation a:hover, .user-navigation a:focus {
@@ -353,16 +404,35 @@ a {
 }
 
 .feature-item h3 {
+  position: relative;
+  margin: 0;
+  margin-bottom: 60px;
   font-size: 30px;
   line-height: 42px;
+}
+
+.feature-item h3::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -10px;
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+.feature-item p {
+  margin: 0 10px;
 }
 
 .index-columns {
   color: #000000;
   background-color: #f9f6f3;
-  background-image: url("../img/pattern-light.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
+  background-image: url("../img/line.png"), url("../img/pattern-light.jpg");
+  background-position: center, 0 0;
+  background-repeat: no-repeat, repeat;
   display: flex;
   justify-content: space-between;
   padding: 50px 80px;
@@ -376,10 +446,23 @@ a {
   font-size: 30px;
   line-height: 42px;
   margin: 0;
+  margin-bottom: 25px;
 }
 
 .news {
   width: 380px;
+}
+
+.news-list {
+  margin-bottom: 25px;
+}
+
+.news-item {
+  margin-bottom: 25px;
+}
+
+.news-item p {
+  margin-bottom: 0;
 }
 
 .news-list time {
@@ -390,14 +473,47 @@ a {
   width: 300px;
 }
 
+.gallery-container {
+  position: relative;
+  height: 260px;
+}
+
 .gallery-content {
   /* Зачем то фон и рамку ??? */
   background-color: #cccccc;
   border: 7px solid #ffffff;
+  margin: 0;
+  height: 164px;
+}
+
+.gallery-content img {
+  height: 164px;
+  width: 286px;
+}
+
+.gallery-button {
+  box-sizing: border-box;
+  margin: 0;
+  width: 140px;
+  position: absolute;
+  bottom: 0;
+}
+
+.gallery-button-back {
+  left: 0;
+}
+
+.gallery-button-next {
+  right: 0;
 }
 
 .contacts {
   width: 380px;
+}
+
+.contacts p {
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .appointment {
@@ -406,21 +522,48 @@ a {
 
 .appointment-info {
   margin: 0;
+  margin-bottom: 15px;
+}
+
+.appointment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .appointment-item {
+  width: 140px;
   margin: 0;
+  margin-bottom: 10px;
+}
+
+.appointment-item label {
+  margin-bottom: 9px;
+  margin-left: 15px;
+  display: block;
 }
 
 .appointment-item input {
   font: inherit;
   /* transparent - прозрачный фон */
+  box-sizing: border-box;
+  width: 140px;
+  padding-top: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 7px;
   background-color: transparent;
   border: 2px solid #000000;
 }
 
 .appointment-item input:focus {
   border-color: #663d15;
+}
+
+.appointment .button {
+  width: 100%;
+  margin-top: 10px;
+  margin-right: 0;
 }
 
 .main-footer {
@@ -449,7 +592,7 @@ a {
   text-decoration: underline;
 }
 
-..footer-contacts a:focus, .footer-contacts a:hover {
+.footer-contacts a:focus, .footer-contacts a:hover {
   /* При наведении убирает подчеркивание ! */
   text-decoration: none;
 }
@@ -459,8 +602,34 @@ a {
   text-align: center;
 }
 
+.footer-social b {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.footer-social ul {
+  width: 141px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  background-color: #000000;
   color: #ffffff;
+}
+
+.social-button:hover, .social-button:focus {
+  background-color: #ffffff;
+}
+
+.social-button:hover path, .social-button:focus path {
+  fill: #000000;
 }
 
 .footer-copyright {
@@ -468,6 +637,16 @@ a {
   text-align: center;
   margin: 0;
   margin-left: auto;
+}
+
+.footer-copyright b {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.footer-copyright .button {
+  display: block;
+  margin-right: 0;
 }
 
 .footer-copyright .button:hover, .footer-copyright .button:focus {
