@@ -383,7 +383,23 @@ a {
   padding: 25px 20px;
 }
 
-.site-navigation a:hover, .site-navigation a:focus, .user-navigation a:hover, .user-navigation a:focus {
+.site-navigation-current a {
+  position: relative;
+  padding: 25px 0;
+  margin: 0px 20px;
+  cursor: default;
+}
+
+.site-navigation-current a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  bottom: 0;
+}
+
+.site-navigation li:not(.site-navigation-current) a:hover, .site-navigation li:not(.site-navigation-current) a:focus, .user-navigation a:hover, .user-navigation a:focus {
   /* Задний фон при наведении на ссылки меню */
   background-color: #242424;
 }
