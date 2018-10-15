@@ -36,7 +36,7 @@
           </ul>
           <ul class="user-navigation">
             <li class="login-link">
-              <a class="login-link" href="login.html">Вход</a>
+              <a class="login-link" href="#">Вход</a>
             </li>
           </ul>
         </div>
@@ -106,7 +106,7 @@
           <br> пн—пт: с 10:00 до 22:00
           <br> сб—вс: с 10:00 до 19:00
         </p>
-        <a class="button" href="map.html">Как проехать</a>
+        <a class="button map-link" href="map.html">Как проехать</a>
         <a class="button" href="contacts.html">Обратная связь</a>
       </section>
       <section class="appointment">
@@ -170,10 +170,9 @@
       </p>
     </div>
   </footer>
-  <!--
   <section class="modal modal-login">
     <h2>Личный кабинет</h2>
-    <p>Введите пожалуйста свой логин и пароль.</p>
+    <p class="modal-description">Введите пожалуйста свой логин и пароль.</p>
     <form class="login-form" action="echo.htmlacademy.ru" method="post">
       <p class="login-item">
         <label class="visually-hidden" for="user-login">Логин</label>
@@ -183,25 +182,28 @@
         <label class="visually-hidden" for="user-password">Пароль</label>
         <input class="password-icon-user" id="user-password" type="password" name="password" value="" placeholder="Пароль">
       </p>
-      <p class="login-password-info">
-        <label class="login-checkbox" for="login-password-info">Запомните меня</label>
-        <input id="login-password-info" type="checkbox" name="remember" class="visually-hidden" value="#" checked>
-        <span class="checkbox-indicator"></span>
+      <p class="login-help">
+        <label class="login-checkbox" for="login-password-info">
+          <input id="login-password-info" type="checkbox" name="remember" class="visually-hidden" value="#" checked>
+          <span class="checkbox-indicator"></span>
+          Запомните меня
+        </label>
         <a class="restore" href="#">Я забыл пароль!</a>
       </p>
       <button class="button" type="submit">Войти</button>
     </form>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <p>
       <img src="img/map.jpg" width="766" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
     </p>
-    <button class="modal-close" type="button">Закрыть</span>
+    <button class="modal-close modal-close-map" type="button"><span class="visually-hidden">Закрыть</span></span>
   </section>
-  -->
-
+  <div class="modal-overlay"></div>
+  <script src="js/popup.js"></script>
+  <script src="js/map.js"></script>
 </body>
 
 </html>
