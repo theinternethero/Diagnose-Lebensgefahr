@@ -901,7 +901,7 @@ a {
   color: #000000;
   background-color: #f8f3f0;
   background-image: url("../img/pattern-light.jpg");
-  position: 0 0;
+  background-position: 0 0;
   background-repeat: repeat;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
   z-index: 2;
@@ -1096,5 +1096,3 @@ a {
   width: 766px;
   height: 560px;
 }
-
-/* ---- Сеточные стили ----*/
