@@ -7,14 +7,12 @@ body {
   font-family: "PT Sans Narrow", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
-  /* На лекции вместо bold ставил 700, потому что bold = 700 */
   font-weight: bold;
   color: #ffffff;
-  /* Заглавные буквы все */
+  /* Заглавные буквы */
   text-transform: uppercase;
   background-color: #000000;
   background-image: url("../img/bg.jpg");
-  /* Почему top? */
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -38,7 +36,6 @@ img {
 }
 
 /* catalog.html */
-
 .inner-page {
   color: #000000;
   background-color: #f9f6f3;
@@ -48,10 +45,10 @@ img {
 }
 
 .page-title {
-  padding: 0;
-  margin: 0;
   font-size: 30px;
   line-height: 42px;
+  padding: 0;
+  margin: 0;
   margin-bottom: 27px;
 }
 
@@ -105,8 +102,8 @@ img {
 .filter fieldset {
   padding: 0;
   margin: 0;
-  border: none;
   margin-bottom: 30px;
+  border: none;
 }
 
 .filters fieldset:first-child {
@@ -120,10 +117,10 @@ img {
 }
 
 .filters ul {
+  line-height: 18px;
   margin: 0;
   padding: 0;
   list-style: none;
-  line-height: 18px;
 }
 
 .filters li {
@@ -154,8 +151,8 @@ img {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: -42px;
   top: 0px;
+  left: -42px;
   border: 2px solid #000;
 }
 
@@ -205,10 +202,10 @@ img {
 
 .catalog-item {
   width: 220px;
-  background-color: #f8f8f8;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   margin-right: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .catalog-item:nth-of-type(3n) {
@@ -220,19 +217,19 @@ img {
 }
 
 .catalog-item>a {
-  color: #000000;
   display: flex;
   flex-direction: column;
+  color: #000000;
 }
 
 .catalog-item h3 {
   font-size: 14px;
   line-height: 18px;
-  order: 1;
   margin-top: 17px;
   margin-bottom: 12px;
   margin-left: 16px;
   margin-right: 15px;
+  order: 1;
 }
 
 .catalog-category {
@@ -241,12 +238,12 @@ img {
 }
 
 .catalog b {
+  width: 112px;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
-  background-color: #e5e5e5;
-  width: 112px;
   padding: 13px 25px 11px;
+  background-color: #e5e5e5;
 }
 
 .catalog-item p {
@@ -259,9 +256,9 @@ img {
 }
 
 .catalog .button {
+  width: 50px;
   font-weight: 18px;
   text-align: center;
-  width: 50px;
   padding: 13px 18px 11px;
   margin-right: 0;
 }
@@ -282,10 +279,10 @@ img {
 }
 
 .pagination-list a {
-  color: #ffffff;
-  background-color: #000000;
-  padding: 10px 19px;
   display: block;
+  color: #ffffff;
+  padding: 10px 19px;
+  background-color: #000000;
 }
 
 .pagination-list a:focus, .pagination-list a:hover, .pagination-list a:active {
@@ -309,9 +306,7 @@ img {
 }
 
 /* конец catalog.html */
-
 /* начало catlog-item.html */
-
 .breadcrumbs-item a {
   line-height: 24px;
   color: #000000;
@@ -343,8 +338,8 @@ img {
 }
 
 .product-photo-preview {
-  display: flex;
   width: 460px;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -388,18 +383,18 @@ img {
 }
 
 .product-info b {
+  width: 112px;
   line-height: 20px;
   text-align: center;
-  background-color: #e5e5e5;
-  width: 112px;
   padding: 13px 36px 11px;
+  background-color: #e5e5e5;
   box-sizing: border-box;
 }
 
 .product-info h3 {
-  margin: 0;
   font-size: 24px;
   line-height: 30px;
+  margin: 0;
   margin-top: 63px;
   margin-bottom: 27px;
 }
@@ -409,8 +404,8 @@ img {
 }
 
 .product-price .button {
-  text-align: center;
   width: 50px;
+  text-align: center;
   padding: 13px 18px 11px;
   margin-right: 0;
 }
@@ -432,7 +427,139 @@ img {
 }
 
 /* конец catlog-item.html */
+/* начало price.html */
+.inner-content {
+  margin-bottom: 75px;
+}
 
+.inner-content h2 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.inner-content h3 {
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.inner-content h2+h3 {
+  margin-top: 30px;
+}
+
+.inner-content p {
+  margin: 14px 0;
+}
+
+.inner-content table {
+  border-collapse: collapse;
+}
+
+.inner-content td {
+  padding: 10px 15px;
+  border: 2px solid #000000;
+}
+
+.inner-content .big-heading {
+  display: flex;
+  align-items: center;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  margin-top: 55px;
+  margin-bottom: 65px;
+}
+
+.big-heading::before,
+.big-heading::after {
+  content: "";
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 50px;
+  height: 2px;
+  background: #000000;
+}
+
+.big-heading::before {
+  margin-right: 25px;
+}
+
+.big-heading::after {
+  margin-left: 25px;
+}
+
+.custom-list-1 {
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-list-1 li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.custom-list-1 li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+.custom-table-1 {
+  width: 100%;
+}
+
+.custom-table-1 td {
+  width: 50%;
+}
+
+.custom-table-1 td:last-child {
+  text-align: center;
+}
+
+.inner-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 60px 0;
+}
+
+.inner-column-left,
+.inner-column-right {
+  width: 460px;
+}
+
+.inner-column-left *:first-child,
+.inner-column-right *:first-child {
+  margin-top: 0;
+}
+
+.inner-column-left *:last-child,
+.inner-column-right *:last-child {
+  margin-bottom: 0;
+}
+
+.inner-columns>h2:first-child {
+  width: 460px;
+  margin-top: 0;
+  margin-right: 460px;
+  margin-right: calc(100% - 460px);
+}
+
+.short-text {
+  padding-right: 80px;
+}
+
+/* конец price.html */
 a {
   /* Убираем подчеркирование */
   text-decoration: none;
@@ -440,13 +567,13 @@ a {
 
 .button {
   display: inline-block;
+  vertical-align: middle;
+  font: inherit;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
   padding: 10px 35px;
   margin-right: 16px;
-  font: inherit;
-  text-align: center;
-  color: #ffffff;
-  vertical-align: middle;
-  text-transform: uppercase;
   background-color: #000000;
   border: none;
 }
@@ -462,21 +589,21 @@ a {
 }
 
 .main-navigation {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  display: flex;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-  background-color: transparent;
   margin-bottom: 75px;
+  background-color: transparent;
 }
 
 .inner-page .main-navigation {
+  flex-direction: row;
+  align-items: flex-start;
   margin-bottom: 0px;
   min-height: 70px;
-  align-items: flex-start;
-  flex-direction: row;
 }
 
 .container {
@@ -501,9 +628,9 @@ a {
 }
 
 .inner-page .main-header {
-  background-color: #000000;
-  margin-bottom: 55px;
   min-height: 70px;
+  margin-bottom: 55px;
+  background-color: #000000;
 }
 
 .main-header-logo {
@@ -515,8 +642,8 @@ a {
 .inner-page .main-header-logo {
   width: 111px;
   height: 24px;
-  order: 0;
   padding: 23px 20px;
+  order: 0;
 }
 
 .main-navigation-wrapper .container {
@@ -542,9 +669,9 @@ a {
 
 .site-navigation, .user-navigation, .features-list, .news-list, .breadcrumbs, .catalog-list, .product-info ul, .product-photo-preview, .breadcrumbs-item, .pagination-list, .footer-social ul {
   /* Убираем маркеры, маргины и паддинги у списков */
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .catalog-list {
@@ -555,8 +682,8 @@ a {
 
 .site-navigation a, .user-navigation a {
   /* Цвет ссылок */
-  color: #ffffff;
   display: block;
+  color: #ffffff;
   padding: 25px 20px;
 }
 
@@ -565,20 +692,20 @@ a {
   padding-left: 50px;
 }
 
-.login-link a::before {
+.login-link::before {
   content: "";
   position: absolute;
-  top: 27px;
-  left: 24px;
   width: 16px;
   height: 16px;
+  top: 27px;
+  left: 24px;
   background-image: url("../img/login.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
 }
 
-.login-link a:hover::before, .login-link a:focus::before, .login-link a:active::before {
+.login-link:hover::before, .login-link:focus::before, .login-link:active::before {
   opacity: 1;
 }
 
@@ -594,8 +721,8 @@ a {
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: #ffffff;
   bottom: 0;
+  background-color: #ffffff;
 }
 
 .site-navigation li:not(.site-navigation-current) a:hover, .site-navigation li:not(.site-navigation-current) a:focus, .user-navigation a:hover, .user-navigation a:focus {
@@ -608,22 +735,22 @@ a {
 }
 
 .features-list {
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
 }
 
 .feature-item {
   /* Располагаем по центру преимущества */
-  text-align: center;
   width: 300px;
+  text-align: center;
 }
 
 .feature-item h3 {
   position: relative;
-  margin: 0;
-  margin-bottom: 60px;
   font-size: 30px;
   line-height: 42px;
+  margin: 0;
+  margin-bottom: 60px;
 }
 
 .feature-item h3::after {
@@ -643,14 +770,14 @@ a {
 }
 
 .index-columns {
+  display: flex;
+  justify-content: space-between;
   color: #000000;
+  padding: 50px 80px;
   background-color: #f9f6f3;
   background-image: url("../img/line.png"), url("../img/pattern-light.jpg");
   background-position: center, 0 0;
   background-repeat: no-repeat, repeat;
-  display: flex;
-  justify-content: space-between;
-  padding: 50px 80px;
 }
 
 .index-columns:first-of-type {
@@ -694,11 +821,10 @@ a {
 }
 
 .gallery-content {
-  /* Зачем то фон и рамку ??? */
+  height: 164px;
+  margin: 0;
   background-color: #cccccc;
   border: 7px solid #ffffff;
-  margin: 0;
-  height: 164px;
 }
 
 .gallery-content img {
@@ -707,11 +833,11 @@ a {
 }
 
 .gallery-button {
-  box-sizing: border-box;
-  margin: 0;
-  width: 140px;
   position: absolute;
+  width: 140px;
   bottom: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .gallery-button-back {
@@ -753,22 +879,22 @@ a {
 }
 
 .appointment-item label {
+  display: block;
   margin-bottom: 9px;
   margin-left: 15px;
-  display: block;
 }
 
 .appointment-item input {
   font: inherit;
-  /* transparent - прозрачный фон */
-  box-sizing: border-box;
   width: 140px;
   padding-top: 8px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 7px;
+  /* transparent - прозрачный фон */
   background-color: transparent;
   border: 2px solid #000000;
+  box-sizing: border-box;
 }
 
 .appointment-item input:focus {
@@ -782,13 +908,18 @@ a {
 }
 
 .main-footer {
+  color: #ffffff;
   padding: 60px 0;
   margin-top: 65px;
-  color: #ffffff;
   background-color: #212121;
   background-image: url("../img/pattern-dark.jpg");
   background-position: 0 0;
   background-repeat: repeat;
+}
+
+.inner-page .main-footer {
+  background-image: linear-gradient(to bottom, black, transparent),
+    url(img/pattern-dark.jpg);
 }
 
 .main-footer .container {
@@ -803,12 +934,12 @@ a {
 
 .footer-contacts a {
   color: #ffffff;
-  /* Подчеркивание ! */
+  /* Подчеркивание */
   text-decoration: underline;
 }
 
 .footer-contacts a:focus, .footer-contacts a:hover {
-  /* При наведении убирает подчеркивание ! */
+  /* При наведении убирает подчеркивание */
   text-decoration: none;
 }
 
@@ -835,8 +966,8 @@ a {
   justify-content: center;
   width: 43px;
   height: 43px;
-  background-color: #000000;
   color: #ffffff;
+  background-color: #000000;
 }
 
 .social-button:hover, .social-button:focus {
@@ -873,12 +1004,15 @@ a {
   0% {
     transform: translateY(-2000px);
   }
+
   70% {
     transform: translateY(30px);
   }
+
   90% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -888,9 +1022,11 @@ a {
   0%, 100% {
     transform: translateX(0);
   }
+
   10%, 30%, 50%, 70%, 90% {
     transform: translateX(-10px);
   }
+
   20%, 40%, 60%, 80% {
     transform: translateX(10px);
   }
@@ -909,33 +1045,54 @@ a {
 
 .modal-overlay {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.3);
-  top: 0px;
-  left: 0px;
   width: 100%;
   height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
   display: none;
 }
 
 .modal-login {
+  width: 300px;
   left: 50%;
   top: 120px;
   margin-left: -230px;
-  width: 300px;
   padding: 50px 80px;
   display: none;
 }
 
 .modal-map {
+  width: 766px;
+  height: 561px;
   left: 50%;
   top: 50%;
   margin-left: -390px;
   margin-top: -280px;
-  width: 766px;
-  height: 561px;
   border: 7px solid white;
   display: none;
+}
+
+.modal-map p {
+  position: absolute;
+  width: 766px;
+  height: 560px;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.modal-map img {
+  width: 766px;
+  height: 560px;
+}
+
+.modal-map iframe {
+  position: relative;
+  border: none;
+  z-index: 2;
 }
 
 .modal-show {
@@ -953,10 +1110,10 @@ a {
 
 .modal-close {
   position: absolute;
-  top: 0px;
-  right: -34px;
   width: 21px;
   height: 21px;
+  top: 0px;
+  right: -34px;
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -966,10 +1123,10 @@ a {
 .modal-close::after, .modal-close::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 2px;
   width: 19px;
   height: 3px;
+  top: 10px;
+  left: 2px;
   background-color: #d0d0d0;
 }
 
@@ -999,15 +1156,15 @@ a {
 }
 
 .login-form input[type="text"], .login-form input[type="password"] {
-  width: 300px;
   font: inherit;
+  width: 300px;
   color: #000000;
-  box-sizing: border-box;
+  text-transform: uppercase;
   padding: 10px 15px;
   padding-right: 40px;
-  text-transform: uppercase;
   background-color: #f9f6f3;
   border: 2px solid #000000;
+  box-sizing: border-box;
 }
 
 .login-form input:focus {
@@ -1041,20 +1198,20 @@ a {
 
 .login-checkbox input[type="checkbox"]+.checkbox-indicator {
   position: absolute;
-  top: 0px;
-  left: 0px;
   width: 17px;
   height: 17px;
+  top: 0px;
+  left: 0px;
   border: 2px solid #000000;
 }
 
 .login-checkbox input[type="checkbox"]:checked~.checkbox-indicator:before, .login-checkbox input[type="checkbox"]:checked~.checkbox-indicator:after {
   content: "";
   position: absolute;
-  top: 8px;
-  left: 1px;
   width: 15px;
   height: 2px;
+  top: 8px;
+  left: 1px;
   background-color: #000000;
 }
 
@@ -1069,7 +1226,7 @@ a {
 .login-checkbox input[type="checkbox"]:focus+.checkbox-indicator {
   border-color: #663d15;
   outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 5px auto -webkit-focus- ring- color;
 }
 
 .restore {
@@ -1084,15 +1241,4 @@ a {
 .login-form .button {
   width: 100%;
   margin-right: 0;
-}
-
-.modal-map p {
-  margin: 0;
-  width: 766px;
-  height: 560px;
-}
-
-.modal-map img {
-  width: 766px;
-  height: 560px;
 }
